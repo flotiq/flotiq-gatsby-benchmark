@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "build:send": "cross-env BENCHMARK_REPORTING_URL=true",
+    "build:send": "cross-env BENCHMARK_REPORTING_URL=true gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
