@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     siteTitle: `Gatsby Drupal Benchmark`,
@@ -16,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `https://dev-willitbuild01.pantheonsite.io//`,
+        baseUrl: process.env.GATSBY_DRUPAL_BASE_URL,
         // Auth needed for POST
       },
     },
