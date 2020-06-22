@@ -13,11 +13,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      articles: allNodeArticle {
+      articles: allArticle {
         nodes {
-          fields {
-            slug
-          }
+            id
         }
       }
     }
@@ -29,10 +27,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.articles.nodes.map(article => {
     createPage({
-      path: article.fields.slug,
+      path: article.id,
       component: require.resolve(`./src/templates/article.js`),
       context: {
-        slug: article.fields.slug,
+        slug: article.id,
       }
     })
   })

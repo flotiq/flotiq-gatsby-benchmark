@@ -9,7 +9,7 @@ const Index = ({ data }) => {
       <ul>
         {data.articles.nodes.map(article => (
           <li>
-            <Link to={article.fields.slug}>{article.title}</Link>
+            <Link to={article.id}>{article.title}</Link>
           </li>
         ))}
       </ul>
@@ -26,12 +26,10 @@ export const query = graphql`
         siteTitle
       }
     }
-    articles: allNodeArticle {
+    articles: allArticle {
       nodes {
         title
-        fields {
-          slug
-        }
+	id
       }
     }
   }
