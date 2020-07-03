@@ -26,6 +26,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.articles.nodes.map(article => {
+    console.log('2', article);
     createPage({
       path: article.id,
       component: require.resolve(`./src/templates/article.js`),

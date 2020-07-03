@@ -8,8 +8,8 @@ const Index = ({ data }) => {
       {data.site.siteMetadata.siteTitle}
       <ul>
         {data.articles.nodes.map(article => (
-          <li>
-            <Link to={article.id}>{article.title}</Link>
+          <li key={article.id.toString()}>
+            <Link to={article.id.toString()}>{article.title}</Link>
           </li>
         ))}
       </ul>
