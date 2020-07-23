@@ -19,4 +19,3 @@ If you wish to talk with us about this project, feel free to hop on [![Discord C
    
 If you found a bug, please report it in [issues](https://github.com/flotiq/flotiq-gatsby-benchmark/issues).
 
-We also welcome any PR with documentation improvements (or typo fixes ;) ).

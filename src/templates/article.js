@@ -4,15 +4,18 @@ import Img from "gatsby-image"
 import Layout from "../components/layout_1"
 
 const Article = ({ data }) => {
-	console.log(data);
-	data.article = data.article.nodes[0];
+	let article = data.article.nodes[0];
   return (
     <Layout>
       <Link to="/">Go back to index page</Link>
       <div>
-        <h2>{data.article.title}</h2>
-          <div>Image can't be displayed</div>
-        <div dangerouslySetInnerHTML={{ __html: data.article.content }} />
+        <h2>{article.title}</h2>
+          {article.image_ && article.image_[0] ? (
+              <Img fluid={article.image_[0].fluid} />
+          ) : (
+              <div>Image can't be displayed</div>
+          )}
+        <div dangerouslySetInnerHTML={{ __html: article.content }} />
       </div>
     </Layout>
   )
@@ -26,7 +29,15 @@ export const query = graphql`
 nodes{
       title
       content
-}
+      image_ {
+        fluid(maxWidth: 1000) {
+          src
+          srcSet
+          aspectRatio
+          originalName
+        }
+      }
     }
+  }
   }
 `
