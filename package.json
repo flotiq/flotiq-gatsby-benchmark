@@ -7,6 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "build:send": "cross-env BENCHMARK_REPORTING_URL=true gatsby build",
+    "data-update": "node scripts/data-update.js",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
@@ -14,6 +15,7 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
+    "faker": "^5.0.0",
     "gatsby": "^2.24.10",
     "gatsby-image": "^2.2.40",
     "gatsby-plugin-benchmark-reporting": "^0.0.2",
