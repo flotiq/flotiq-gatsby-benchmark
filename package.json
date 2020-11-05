@@ -21,7 +21,7 @@
     "gatsby-plugin-benchmark-reporting": "^0.0.2",
     "gatsby-plugin-sharp": "^2.6.21",
     "gatsby-source-filesystem": "^2.3.22",
-    "gatsby-source-flotiq": "^2.1.0",
+    "gatsby-source-flotiq": "^2.2.0",
     "gatsby-transformer-sharp": "^2.3.14",
     "lodash.kebabcase": "^4.1.1",
     "react": "^16.12.0",
