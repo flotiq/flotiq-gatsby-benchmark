@@ -6,16 +6,22 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-benchmark-reporting`,
-    `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-source-flotiq',
       options: {
         baseUrl: process.env.GATSBY_FLOTIQ_API_URL,
         authToken: process.env.GATSBY_FLOTIQ_API_TOKEN,
         forceReload: false,
+        includeTypes: [
+            'article',
+            '_media'
+        ],
+        timeout: 10000
       },
     },
-    `gatsby-transformer-sharp`,
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
