@@ -6,6 +6,9 @@
 Flotiq Will it Build Example
 ============================
 
+> [!NOTE]
+> Gatsby starter projects are no longer supported. We recommend using the Next.js starters for new projects instead. See: [nextjs-starters](https://flotiq.com/docs/Universe/nextjs/nextjs-starters/)
+
 
 Example page for Flotiq as a source for "Will It Build".
 Should/Will be generalized into e.g. a theme.
